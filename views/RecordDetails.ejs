@@ -23,11 +23,11 @@
 
         <button id="updateBtn" >UPDATE</button>
         <form id="updateForm" action="/details/<%=details.id%>?_method=put" method="post">
-        <input type="text" name="Country" value="<%=details.Country%>">
-        <input type="text" name="TotalConfirmed" value="<%=details.TotalConfirmed%>">
-        <input type="text" name="TotalDeaths" value="<%=details.TotalDeaths%>">
-        <input type="text" name="TotalRecovered" value="<%=details.TotalRecovered%>">
-        <input type="date" name="Date" value="<%=details.Date%>">
+            Country <input type="text" name="Country" value="<%=details.Country%>">
+            Total Confirmed <input type="text" name="TotalConfirmed" value="<%=details.TotalConfirmed%>">
+            Total Deaths <input type="text" name="TotalDeaths" value="<%=details.TotalDeaths%>">
+            Total Recovered <input type="text" name="TotalRecovered" value="<%=details.TotalRecovered%>">
+            Date <input type="date" name="Date" value="<%=details.Date%>">
         <button type="submit">Update</button>
         </form>
 
