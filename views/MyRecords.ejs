@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyRecords</title>
+</head>
+<body>
+    <h1>MyRecords</h1>
+
+    <% record.forEach(val=>{ %>
+        <p>Country: <%=val.country%></p>
+        <p>Date: <%=val.date%></p>
+
+        <form action="/details/<%=val.id%>" method="get">
+        <button type="submit">VIEW DETAILS</button>
+        </form>
+
+   <% }) %>
+</body>
+</html>

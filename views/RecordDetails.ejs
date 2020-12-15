@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecordDetails</title>
+</head>
+<body>
+    <h1>RecordDetails</h1>
+
+    <p>Covid Statistics for: <%=details.country%></p>
+        <p>TotalConfirmed: <%=details.totalconfirmed%></p>
+        <p>TotalDeaths: <%=details.totaldeaths%></p>
+        <p>TotalRecovered: <%=details.totalrecovered%></p>
+        <p>Date: <%=details.date%></p>
+
+        <button id="updateBtn" >UPDATE</button>
+        <form id="updateForm" action="/details/<%=details.id%>?_method=put" method="post">
+        <input type="text" name="Country" value="<%=details.Country%>">
+        <input type="text" name="TotalConfirmed" value="<%=details.TotalConfirmed%>">
+        <input type="text" name="TotalDeaths" value="<%=details.TotalDeaths%>">
+        <input type="text" name="TotalRecovered" value="<%=details.TotalRecovered%>">
+        <input type="date" name="Date" value="<%=details.Date%>">
+        <button type="submit">Update</button>
+        </form>
+
+        <form action="/details/<%=details.id%>?_method=delete" method="post">
+            <button>DELETE</button>
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script src="/app.js"></script>
+
+</body>
+</html>
