@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllCountries</title>
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
     <h1>AllCountries</h1>
 
+    <a href="/">Home</a>
+    <a href="/allCountries">ALL COUNTRIES</a>
+    <a href="/MyRecords">My Records</a>
+
     <h2>Covid-19 Statistics for All Countries</h2>
-    <% countries.forEach(val=>{ %>
-        <p>Country: <%=val.Country%></p>
-        <p>Total Confirmed Cases: <%=val.TotalConfirmed%></p>
-        <p>Total Deaths Cases: <%=val.TotalDeaths%></p>
-        <p>Total Recovered Cases: <%=val.TotalRecovered%></p>
-        <p>Date: <%=val.Date%></p>
+    <div class="card">
 
-        <form action="/addRecord" method="post">
-        <input type="hidden" name="Country" value="<%=val.Country%>">
-        <input type="hidden" name="TotalConfirmed" value="<%=val.TotalConfirmed%>">
-        <input type="hidden" name="TotalDeaths" value="<%=val.TotalDeaths%>">
-        <input type="hidden" name="TotalRecovered" value="<%=val.TotalRecovered%>">
-        <input type="hidden" name="Date" value="<%=val.Date%>">
-        <button type="submit">ADD TO MY RECORDS</button>
-        </form>
-
-   <% }) %>
+        <% countries.forEach(val=>{ %>
+            <p>Country: <%=val.Country%></p>
+            <p>Total Confirmed Cases: <%=val.TotalConfirmed%></p>
+            <p>Total Deaths Cases: <%=val.TotalDeaths%></p>
+            <p>Total Recovered Cases: <%=val.TotalRecovered%></p>
+            <p>Date: <%=val.Date%></p>
+    
+            <form action="/addRecord" method="post">
+            <input type="hidden" name="Country" value="<%=val.Country%>">
+            <input type="hidden" name="TotalConfirmed" value="<%=val.TotalConfirmed%>">
+            <input type="hidden" name="TotalDeaths" value="<%=val.TotalDeaths%>">
+            <input type="hidden" name="TotalRecovered" value="<%=val.TotalRecovered%>">
+            <input type="hidden" name="Date" value="<%=val.Date%>">
+            <button type="submit">ADD TO MY RECORDS</button>
+            </form>
+    
+       <% }) %>
+    </div>
 </body>
 </html>

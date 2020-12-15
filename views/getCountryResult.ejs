@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>getCountryResult</title>
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
     <h1>getCountryResult</h1>
 
-    <a href="/">HOME</a>
+    <a href="/">Home</a>
+    <a href="/allCountries">ALL COUNTRIES</a>
+    <a href="/MyRecords">My Records</a>
 
     <h2>COVID19 Statistics</h2>
+<div class="cards">
 
-   <% resultsSearch.forEach(val=>{ %>
-        <p>Date: <%=val.Date%></p>
-        <p>Number of Confirmed Cases: <%=val.Cases%></p>
-
-   <% }) %>
+    <% resultsSearch.forEach(val=>{ %>
+         <p>Date: <%=val.Date%></p>
+         <p>Number of Confirmed Cases: <%=val.Cases%></p>
+ 
+    <% }) %>
+</div>
 </body>
 </html>

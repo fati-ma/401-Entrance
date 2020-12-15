@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecordDetails</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>RecordDetails</h1>
+    <h1>Records Details</h1>
+
+    <a href="/">Home</a>
+    <a href="/allCountries">ALL COUNTRIES</a>
+    <a href="/MyRecords">My Records</a>
+
+<div class="card">
 
     <p>Covid Statistics for: <%=details.country%></p>
-        <p>TotalConfirmed: <%=details.totalconfirmed%></p>
-        <p>TotalDeaths: <%=details.totaldeaths%></p>
-        <p>TotalRecovered: <%=details.totalrecovered%></p>
+        <p>Total Confirmed: <%=details.totalconfirmed%></p>
+        <p>Total Deaths: <%=details.totaldeaths%></p>
+        <p>Total Recovered: <%=details.totalrecovered%></p>
         <p>Date: <%=details.date%></p>
 
         <button id="updateBtn" >UPDATE</button>
@@ -27,6 +34,7 @@
         <form action="/details/<%=details.id%>?_method=delete" method="post">
             <button>DELETE</button>
         </form>
+</div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script src="/app.js"></script>

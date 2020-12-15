@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyRecords</title>
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
     <h1>MyRecords</h1>
+
+    <a href="/">Home</a>
+    <a href="/allCountries">ALL COUNTRIES</a>
+    <a href="/MyRecords">My Records</a>
+
+<div class="card">
 
     <% record.forEach(val=>{ %>
         <p>Country: <%=val.country%></p>
@@ -17,5 +25,6 @@
         </form>
 
    <% }) %>
+</div>
 </body>
 </html>
